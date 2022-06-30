@@ -45,7 +45,7 @@ python3 manage.py runserver
 
 ## Получение публикаций
 Получить список всех публикаций с пагинацией.
-### _эндпойнт: /api/v1/posts/
+### _url: /api/v1/posts/
 **GET:**
 ```
 {
@@ -65,7 +65,7 @@ python3 manage.py runserver
 ```
 ## Создание публикации
 Добавление новой публикации в коллекцию публикаций. Анонимные запросы запрещены.
-### _эндпойнт: /api/v1/posts/
+### _url: /api/v1/posts/
 **POST:**
 ```
 {
@@ -78,7 +78,7 @@ python3 manage.py runserver
 }
 ```
 ## Получение публикации по id.
-### _эндпойнт: /api/v1/posts/{id}/
+### _url: /api/v1/posts/{id}/
 **GET:**
 ```
 {
@@ -91,7 +91,7 @@ python3 manage.py runserver
 }
 ```
 ## Получение всех комментариев к публикации.
-### _эндпойнт: /api/v1/posts/{post_id}/comments/
+### _url: /api/v1/posts/{post_id}/comments/
 **GET:**
 ```
 [
@@ -113,7 +113,7 @@ python3 manage.py runserver
 ```
 ## Подписки
 Возвращает все подписки пользователя, сделавшего запрос. Анонимные запросы запрещены.Возможен поиск по подпискам по параметру search
-### _эндпойнт: /api/v1/follow/
+### _url: /api/v1/follow/
 **GET:**
 ```
 [
