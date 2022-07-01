@@ -13,17 +13,17 @@ cd yatube_api/
 Cоздать и активировать виртуальное окружение:
 
 ```
-python3 -m venv env
+python -m venv env
 ```
 
 ```
-source env/bin/activate
+в macOS или Linux: source venv/bin/activate, для Windows: source venv/Scripts/activate
 ```
 
 Установить зависимости из файла requirements.txt:
 
 ```
-python3 -m pip install --upgrade pip
+python -m pip install --upgrade pip
 ```
 
 ```
@@ -33,19 +33,21 @@ pip install -r requirements.txt
 Выполнить миграции:
 
 ```
-python3 manage.py migrate
+python manage.py migrate
 ```
 
 Запустить проект:
 
 ```
-python3 manage.py runserver
+python manage.py runserver
 ```
+
 # Примеры запросов и ответов API:
 
 ## Получение публикаций
 Получить список всех публикаций с пагинацией.
 ### _url: /api/v1/posts/
+
 **GET:**
 ```
 {
@@ -63,9 +65,11 @@ python3 manage.py runserver
     }
 }
 ```
+
 ## Создание публикации
 Добавление новой публикации в коллекцию публикаций. Анонимные запросы запрещены.
 ### _url: /api/v1/posts/
+
 **POST:**
 ```
 {
@@ -77,8 +81,10 @@ python3 manage.py runserver
     "group": null
 }
 ```
+
 ## Получение публикации по id.
 ### _url: /api/v1/posts/{id}/
+
 **GET:**
 ```
 {
@@ -90,8 +96,10 @@ python3 manage.py runserver
     "group": 1
 }
 ```
+
 ## Получение всех комментариев к публикации.
 ### _url: /api/v1/posts/{post_id}/comments/
+
 **GET:**
 ```
 [
@@ -111,9 +119,11 @@ python3 manage.py runserver
     }
 ]
 ```
+
 ## Подписки
 Возвращает все подписки пользователя, сделавшего запрос. Анонимные запросы запрещены.Возможен поиск по подпискам по параметру search
 ### _url: /api/v1/follow/
+
 **GET:**
 ```
 [
