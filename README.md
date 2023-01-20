@@ -1,7 +1,8 @@
-### Описание проекта:
-  Проект позволяет интегрировать сайт Yatube в API-веб сервис для обмена данными в формате JSON. 
+### Description of project:
+  This project allowed integrate web-site Yatube into API-web service for changing of data in JSON format.
+  
 
-### Инструкция для установки:
+### Installation:
 ```
 git clone git@github.com:lanazzk/api_final_yatube.git
 ```
@@ -10,17 +11,17 @@ git clone git@github.com:lanazzk/api_final_yatube.git
 cd yatube_api/
 ```
 
-Cоздать и активировать виртуальное окружение:
+Create and activate virtual environment:
 
 ```
 python -m venv env
 ```
 
 ```
-в macOS или Linux: source venv/bin/activate, для Windows: source venv/Scripts/activate
+For macOS or Linux: source venv/bin/activate, for Windows: source venv/Scripts/activate
 ```
 
-Установить зависимости из файла requirements.txt:
+Install dependencies from requirements.txt:
 
 ```
 python -m pip install --upgrade pip
@@ -30,22 +31,22 @@ python -m pip install --upgrade pip
 pip install -r requirements.txt
 ```
 
-Выполнить миграции:
+Execute migrations:
 
 ```
 python manage.py migrate
 ```
 
-Запустить проект:
+Launch project:
 
 ```
 python manage.py runserver
 ```
 
-# Примеры запросов и ответов API:
+# Examples of API requests:
 
-## Получение публикаций
-Получить список всех публикаций с пагинацией.
+## Get all publictions with pagination:
+
 ### _url: /api/v1/posts/
 
 **GET:**
@@ -66,8 +67,9 @@ python manage.py runserver
 }
 ```
 
-## Создание публикации
-Добавление новой публикации в коллекцию публикаций. Анонимные запросы запрещены.
+## Create publication
+Create publication. Anonimous requests not allowed.
+
 ### _url: /api/v1/posts/
 
 **POST:**
@@ -82,7 +84,7 @@ python manage.py runserver
 }
 ```
 
-## Получение публикации по id.
+## Get publication.
 ### _url: /api/v1/posts/{id}/
 
 **GET:**
@@ -97,7 +99,7 @@ python manage.py runserver
 }
 ```
 
-## Получение всех комментариев к публикации.
+## Get comments.
 ### _url: /api/v1/posts/{post_id}/comments/
 
 **GET:**
@@ -120,8 +122,8 @@ python manage.py runserver
 ]
 ```
 
-## Подписки
-Возвращает все подписки пользователя, сделавшего запрос. Анонимные запросы запрещены.Возможен поиск по подпискам по параметру search
+## Followers
+
 ### _url: /api/v1/follow/
 
 **GET:**
